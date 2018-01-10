@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>d49dd892-cf69-4490-9921-ce5afa5a07d7</ProjectGuid>
+    <ProjectGuid>{D49DD892-CF69-4490-9921-CE5AFA5A07D7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>DTD.OM.FormsControl</RootNamespace>
     <AssemblyName>DTD.OM.FormsControl</AssemblyName>
@@ -29,33 +29,67 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    <Reference Include="System.Drawing"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Windows.Forms"/>
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="Accounts.SubTab\FinancialStatementControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="Accounts.SubTab\FinancialStatementControl.Designer.cs">
+      <DependentUpon>FinancialStatementControl.cs</DependentUpon>
     </Compile>
-
+    <Compile Include="Accounts.SubTab\FundAllocationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Accounts.SubTab\FundAllocationControl.Designer.cs">
+      <DependentUpon>FundAllocationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls\StatementAllocationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\StatementAllocationControl.Designer.cs">
+      <DependentUpon>StatementAllocationControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\StatementBreakdownForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\StatementBreakdownForm.Designer.cs">
+      <DependentUpon>StatementBreakdownForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainTabs\AccountsTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainTabs\AccountsTab.Designer.cs">
+      <DependentUpon>AccountsTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Accounts.SubTab\FinancialStatementControl.resx">
+      <DependentUpon>FinancialStatementControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Accounts.SubTab\FundAllocationControl.resx">
+      <DependentUpon>FundAllocationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\StatementAllocationControl.resx">
+      <DependentUpon>StatementAllocationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\StatementBreakdownForm.resx">
+      <DependentUpon>StatementBreakdownForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainTabs\AccountsTab.resx">
+      <DependentUpon>AccountsTab.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- </Project>
+</Project>

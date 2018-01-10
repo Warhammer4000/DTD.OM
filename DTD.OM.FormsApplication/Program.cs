@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTD.OM.FormsApplication.DashBoard;
 
 namespace DTD.OM.FormsApplication
 {
@@ -16,7 +17,7 @@ namespace DTD.OM.FormsApplication
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new AdminDashboard());
         }
     }
 }

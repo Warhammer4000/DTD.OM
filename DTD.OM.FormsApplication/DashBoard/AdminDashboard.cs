@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTD.OM.FormsControl.MainTabs;
 
 namespace DTD.OM.FormsApplication.DashBoard
 {
@@ -15,6 +16,14 @@ namespace DTD.OM.FormsApplication.DashBoard
         public AdminDashboard()
         {
             InitializeComponent();
+            AccountingButton_Click(new object(), new EventArgs());
+        }
+
+        private void AccountingButton_Click(object sender, EventArgs e)
+        {
+            AccountsTab accountsTab = new AccountsTab(){Dock = DockStyle.Fill};
+            ViewPanel.Controls.Clear();
+            ViewPanel.Controls.Add(accountsTab);
         }
     }
 }

@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace DTD.OM.FormsControl
+namespace DTD.OM.FormsControl.Accounts.SubTab
 {
-    public partial class UserControl1: UserControl
+    public partial class FinancialStatementControl : UserControl
     {
-        public UserControl1()
+        public FinancialStatementControl()
         {
             InitializeComponent();
         }
