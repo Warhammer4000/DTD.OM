@@ -28,99 +28,105 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.LogButton = new System.Windows.Forms.Button();
+            this.BreakdownButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.Left = new System.Windows.Forms.NumericUpDown();
+            this.Allocated = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Left)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Allocated)).BeginInit();
             this.SuspendLayout();
             // 
-            // button3
+            // LogButton
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button3.Location = new System.Drawing.Point(546, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 95);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.LogButton.BackColor = System.Drawing.Color.SpringGreen;
+            this.LogButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.LogButton.Location = new System.Drawing.Point(546, 0);
+            this.LogButton.Name = "LogButton";
+            this.LogButton.Size = new System.Drawing.Size(75, 60);
+            this.LogButton.TabIndex = 15;
+            this.LogButton.Text = "Logs";
+            this.LogButton.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // BreakdownButton
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button2.Location = new System.Drawing.Point(471, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 95);
-            this.button2.TabIndex = 16;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.BreakdownButton.BackColor = System.Drawing.Color.Salmon;
+            this.BreakdownButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BreakdownButton.Location = new System.Drawing.Point(471, 0);
+            this.BreakdownButton.Name = "BreakdownButton";
+            this.BreakdownButton.Size = new System.Drawing.Size(75, 60);
+            this.BreakdownButton.TabIndex = 16;
+            this.BreakdownButton.Text = "Break Down";
+            this.BreakdownButton.UseVisualStyleBackColor = false;
+            this.BreakdownButton.Click += new System.EventHandler(this.BreakDownButton_Click);
             // 
-            // button1
+            // SaveButton
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Location = new System.Drawing.Point(396, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 95);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.SaveButton.BackColor = System.Drawing.Color.GreenYellow;
+            this.SaveButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.SaveButton.Location = new System.Drawing.Point(396, 0);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 60);
+            this.SaveButton.TabIndex = 17;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = false;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.numericUpDown1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.numericUpDown);
+            this.panel1.Controls.Add(this.Left);
+            this.panel1.Controls.Add(this.Allocated);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 72);
+            this.panel1.Location = new System.Drawing.Point(0, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(396, 23);
             this.panel1.TabIndex = 18;
             // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.numericUpDown1.Location = new System.Drawing.Point(243, 0);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
-            999999999,
-            0,
-            0,
-            0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(116, 20);
-            this.numericUpDown1.TabIndex = 7;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Right;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(204, 0);
+            this.label3.Location = new System.Drawing.Point(241, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 24);
-            this.label3.TabIndex = 5;
+            this.label3.TabIndex = 8;
             this.label3.Text = "Left";
             // 
-            // numericUpDown
+            // Left
             // 
-            this.numericUpDown.Dock = System.Windows.Forms.DockStyle.Left;
-            this.numericUpDown.Location = new System.Drawing.Point(88, 0);
-            this.numericUpDown.Maximum = new decimal(new int[] {
+            this.Left.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Left.Enabled = false;
+            this.Left.Location = new System.Drawing.Point(280, 0);
+            this.Left.Maximum = new decimal(new int[] {
             999999999,
             0,
             0,
             0});
-            this.numericUpDown.Name = "numericUpDown";
-            this.numericUpDown.Size = new System.Drawing.Size(116, 20);
-            this.numericUpDown.TabIndex = 1;
+            this.Left.Name = "Left";
+            this.Left.ReadOnly = true;
+            this.Left.Size = new System.Drawing.Size(116, 20);
+            this.Left.TabIndex = 7;
+            // 
+            // Allocated
+            // 
+            this.Allocated.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Allocated.Location = new System.Drawing.Point(88, 0);
+            this.Allocated.Maximum = new decimal(new int[] {
+            999999999,
+            0,
+            0,
+            0});
+            this.Allocated.Name = "Allocated";
+            this.Allocated.Size = new System.Drawing.Size(116, 20);
+            this.Allocated.TabIndex = 1;
+            this.Allocated.ValueChanged += new System.EventHandler(this.Allocated_ValueChanged);
             // 
             // label2
             // 
@@ -152,15 +158,15 @@
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.BreakdownButton);
+            this.Controls.Add(this.LogButton);
             this.Name = "StatementAllocationControl";
-            this.Size = new System.Drawing.Size(621, 95);
+            this.Size = new System.Drawing.Size(621, 60);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Left)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Allocated)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,14 +174,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button LogButton;
+        private System.Windows.Forms.Button BreakdownButton;
+        private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Panel panel1;
-        public System.Windows.Forms.NumericUpDown numericUpDown1;
-        public System.Windows.Forms.Label label3;
-        public System.Windows.Forms.NumericUpDown numericUpDown;
+        public System.Windows.Forms.NumericUpDown Left;
+        public System.Windows.Forms.NumericUpDown Allocated;
         public System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.Label label3;
     }
 }

@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.OM.FormsApplication", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.OM.FormsControl", "DTD.OM.FormsControl\DTD.OM.FormsControl.csproj", "{D49DD892-CF69-4490-9921-CE5AFA5A07D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.OM.ViewModels", "DTD.OM.ViewModels\DTD.OM.ViewModels.csproj", "{89872872-D347-483A-B640-6F6B0EB9629E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{D49DD892-CF69-4490-9921-CE5AFA5A07D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D49DD892-CF69-4490-9921-CE5AFA5A07D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D49DD892-CF69-4490-9921-CE5AFA5A07D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89872872-D347-483A-B640-6F6B0EB9629E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89872872-D347-483A-B640-6F6B0EB9629E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89872872-D347-483A-B640-6F6B0EB9629E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89872872-D347-483A-B640-6F6B0EB9629E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

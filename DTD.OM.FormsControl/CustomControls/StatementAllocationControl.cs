@@ -8,19 +8,30 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTD.OM.FormsControl.Dialogues;
+using DTD.OM.ViewModels.Accounts;
 
 namespace DTD.OM.FormsControl.CustomControls
 {
     public partial class StatementAllocationControl : UserControl
     {
+        public Statement Statement { get; set; }
         public StatementAllocationControl()
         {
             InitializeComponent();
+            Statement=new Statement();
+        }
+
+        public StatementAllocationControl(Statement statement)
+        {
+            InitializeComponent();
+            Statement = statement;
+            Allocated.Value = Statement.Allocated;
+            Left.Value = Statement.Left;
         }
 
         private void BreakDownButton_Click(object sender, EventArgs e)
         {
-            StatementBreakdownForm form= new StatementBreakdownForm();
+            var form= new StatementBreakdownForm(Statement.BreakDown);
             if (form.ShowDialog() == DialogResult.OK)
             {
 
@@ -28,9 +39,9 @@ namespace DTD.OM.FormsControl.CustomControls
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Allocated_ValueChanged(object sender, EventArgs e)
         {
-
+            Statement.Allocated = Allocated.Value;
         }
     }
 }

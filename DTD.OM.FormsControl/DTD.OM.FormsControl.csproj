@@ -53,6 +53,12 @@
     <Compile Include="Accounts.SubTab\FundAllocationControl.Designer.cs">
       <DependentUpon>FundAllocationControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\DailyExpenseControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\DailyExpenseControl.Designer.cs">
+      <DependentUpon>DailyExpenseControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\StatementAllocationControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <EmbeddedResource Include="Accounts.SubTab\FundAllocationControl.resx">
       <DependentUpon>FundAllocationControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\DailyExpenseControl.resx">
+      <DependentUpon>DailyExpenseControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\StatementAllocationControl.resx">
       <DependentUpon>StatementAllocationControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,6 +99,12 @@
     <EmbeddedResource Include="MainTabs\AccountsTab.resx">
       <DependentUpon>AccountsTab.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTD.OM.ViewModels\DTD.OM.ViewModels.csproj">
+      <Project>{89872872-d347-483a-b640-6f6b0eb9629e}</Project>
+      <Name>DTD.OM.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

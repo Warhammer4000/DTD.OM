@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.YearLable = new System.Windows.Forms.Label();
-            this.MonthLable = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.MonthLable = new System.Windows.Forms.Label();
+            this.YearLable = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,14 +48,17 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ViewPanel = new System.Windows.Forms.Panel();
+            this.AddItem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,68 +77,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(868, 24);
             this.panel1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 24);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Allocation";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.numericUpDown1.Location = new System.Drawing.Point(92, 0);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 1;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(212, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Left";
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.numericUpDown2.Location = new System.Drawing.Point(251, 0);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.ReadOnly = true;
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 3;
-            // 
-            // YearLable
-            // 
-            this.YearLable.AutoSize = true;
-            this.YearLable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.YearLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearLable.Location = new System.Drawing.Point(823, 0);
-            this.YearLable.Name = "YearLable";
-            this.YearLable.Size = new System.Drawing.Size(45, 20);
-            this.YearLable.TabIndex = 4;
-            this.YearLable.Text = "2018";
-            // 
-            // MonthLable
-            // 
-            this.MonthLable.AutoSize = true;
-            this.MonthLable.Dock = System.Windows.Forms.DockStyle.Right;
-            this.MonthLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthLable.Location = new System.Drawing.Point(781, 0);
-            this.MonthLable.Name = "MonthLable";
-            this.MonthLable.Size = new System.Drawing.Size(42, 20);
-            this.MonthLable.TabIndex = 5;
-            this.MonthLable.Text = "May,";
             // 
             // label5
             // 
@@ -157,6 +98,80 @@
             this.comboBox1.Size = new System.Drawing.Size(60, 21);
             this.comboBox1.TabIndex = 6;
             // 
+            // MonthLable
+            // 
+            this.MonthLable.AutoSize = true;
+            this.MonthLable.Dock = System.Windows.Forms.DockStyle.Right;
+            this.MonthLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MonthLable.Location = new System.Drawing.Point(781, 0);
+            this.MonthLable.Name = "MonthLable";
+            this.MonthLable.Size = new System.Drawing.Size(42, 20);
+            this.MonthLable.TabIndex = 5;
+            this.MonthLable.Text = "May,";
+            // 
+            // YearLable
+            // 
+            this.YearLable.AutoSize = true;
+            this.YearLable.Dock = System.Windows.Forms.DockStyle.Right;
+            this.YearLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.YearLable.Location = new System.Drawing.Point(823, 0);
+            this.YearLable.Name = "YearLable";
+            this.YearLable.Size = new System.Drawing.Size(45, 20);
+            this.YearLable.TabIndex = 4;
+            this.YearLable.Text = "2018";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.numericUpDown2.Enabled = false;
+            this.numericUpDown2.Location = new System.Drawing.Point(251, 0);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.ReadOnly = true;
+            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown2.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(212, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 24);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Left";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.numericUpDown1.Enabled = false;
+            this.numericUpDown1.Location = new System.Drawing.Point(92, 0);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.ReadOnly = true;
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 24);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Allocation";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.Info;
@@ -166,8 +181,20 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(702, 24);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(166, 600);
+            this.panel2.Size = new System.Drawing.Size(166, 400);
             this.panel2.TabIndex = 1;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.richTextBox1.Location = new System.Drawing.Point(3, 27);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(157, 368);
+            this.richTextBox1.TabIndex = 1;
+            this.richTextBox1.Text = "";
             // 
             // label3
             // 
@@ -180,18 +207,6 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Info";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.richTextBox1.Location = new System.Drawing.Point(3, 27);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(157, 568);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
             // 
             // panel3
             // 
@@ -226,7 +241,7 @@
             // 
             this.SaveButton.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.SaveButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.SaveButton.Location = new System.Drawing.Point(0, 586);
+            this.SaveButton.Location = new System.Drawing.Point(0, 386);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(702, 38);
             this.SaveButton.TabIndex = 4;
@@ -238,7 +253,7 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.numericUpDown4);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 562);
+            this.panel4.Location = new System.Drawing.Point(0, 362);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(702, 24);
             this.panel4.TabIndex = 5;
@@ -257,7 +272,13 @@
             // numericUpDown4
             // 
             this.numericUpDown4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.numericUpDown4.Enabled = false;
             this.numericUpDown4.Location = new System.Drawing.Point(582, 0);
+            this.numericUpDown4.Maximum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            0});
             this.numericUpDown4.Name = "numericUpDown4";
             this.numericUpDown4.ReadOnly = true;
             this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
@@ -267,18 +288,41 @@
             // 
             this.panel5.AutoScroll = true;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel5.Controls.Add(this.ViewPanel);
+            this.panel5.Controls.Add(this.AddItem);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(0, 49);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(702, 513);
+            this.panel5.Size = new System.Drawing.Size(702, 313);
             this.panel5.TabIndex = 6;
+            // 
+            // ViewPanel
+            // 
+            this.ViewPanel.AutoScroll = true;
+            this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewPanel.Location = new System.Drawing.Point(0, 36);
+            this.ViewPanel.Name = "ViewPanel";
+            this.ViewPanel.Size = new System.Drawing.Size(698, 273);
+            this.ViewPanel.TabIndex = 1;
+            // 
+            // AddItem
+            // 
+            this.AddItem.BackColor = System.Drawing.Color.Olive;
+            this.AddItem.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddItem.Location = new System.Drawing.Point(0, 0);
+            this.AddItem.Name = "AddItem";
+            this.AddItem.Size = new System.Drawing.Size(698, 36);
+            this.AddItem.TabIndex = 0;
+            this.AddItem.Text = "+Add Item";
+            this.AddItem.UseVisualStyleBackColor = false;
+            this.AddItem.Click += new System.EventHandler(this.AddItem_Click);
             // 
             // StatementBreakdownForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(868, 624);
+            this.ClientSize = new System.Drawing.Size(868, 424);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.SaveButton);
@@ -289,8 +333,8 @@
             this.Text = "Breakdown";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -299,6 +343,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -325,5 +370,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel ViewPanel;
+        private System.Windows.Forms.Button AddItem;
     }
 }

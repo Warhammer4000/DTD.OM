@@ -36,10 +36,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.statementAllocationControl1 = new DTD.OM.FormsControl.CustomControls.StatementAllocationControl();
-            this.statementAllocationControl2 = new DTD.OM.FormsControl.CustomControls.StatementAllocationControl();
-            this.statementAllocationControl3 = new DTD.OM.FormsControl.CustomControls.StatementAllocationControl();
             this.statementAllocationControl4 = new DTD.OM.FormsControl.CustomControls.StatementAllocationControl();
+            this.statementAllocationControl3 = new DTD.OM.FormsControl.CustomControls.StatementAllocationControl();
+            this.statementAllocationControl2 = new DTD.OM.FormsControl.CustomControls.StatementAllocationControl();
+            this.statementAllocationControl1 = new DTD.OM.FormsControl.CustomControls.StatementAllocationControl();
             this.panel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -136,25 +136,15 @@
             this.panel2.Size = new System.Drawing.Size(669, 502);
             this.panel2.TabIndex = 4;
             // 
-            // statementAllocationControl1
+            // statementAllocationControl4
             // 
-            this.statementAllocationControl1.BackColor = System.Drawing.Color.MistyRose;
-            this.statementAllocationControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.statementAllocationControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statementAllocationControl1.Location = new System.Drawing.Point(0, 0);
-            this.statementAllocationControl1.Name = "statementAllocationControl1";
-            this.statementAllocationControl1.Size = new System.Drawing.Size(669, 80);
-            this.statementAllocationControl1.TabIndex = 0;
-            // 
-            // statementAllocationControl2
-            // 
-            this.statementAllocationControl2.BackColor = System.Drawing.Color.MistyRose;
-            this.statementAllocationControl2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.statementAllocationControl2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statementAllocationControl2.Location = new System.Drawing.Point(0, 80);
-            this.statementAllocationControl2.Name = "statementAllocationControl2";
-            this.statementAllocationControl2.Size = new System.Drawing.Size(669, 80);
-            this.statementAllocationControl2.TabIndex = 1;
+            this.statementAllocationControl4.BackColor = System.Drawing.Color.MistyRose;
+            this.statementAllocationControl4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.statementAllocationControl4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statementAllocationControl4.Location = new System.Drawing.Point(0, 240);
+            this.statementAllocationControl4.Name = "statementAllocationControl4";
+            this.statementAllocationControl4.Size = new System.Drawing.Size(669, 80);
+            this.statementAllocationControl4.TabIndex = 3;
             // 
             // statementAllocationControl3
             // 
@@ -166,15 +156,25 @@
             this.statementAllocationControl3.Size = new System.Drawing.Size(669, 80);
             this.statementAllocationControl3.TabIndex = 2;
             // 
-            // statementAllocationControl4
+            // statementAllocationControl2
             // 
-            this.statementAllocationControl4.BackColor = System.Drawing.Color.MistyRose;
-            this.statementAllocationControl4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.statementAllocationControl4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.statementAllocationControl4.Location = new System.Drawing.Point(0, 240);
-            this.statementAllocationControl4.Name = "statementAllocationControl4";
-            this.statementAllocationControl4.Size = new System.Drawing.Size(669, 80);
-            this.statementAllocationControl4.TabIndex = 3;
+            this.statementAllocationControl2.BackColor = System.Drawing.Color.MistyRose;
+            this.statementAllocationControl2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.statementAllocationControl2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statementAllocationControl2.Location = new System.Drawing.Point(0, 80);
+            this.statementAllocationControl2.Name = "statementAllocationControl2";
+            this.statementAllocationControl2.Size = new System.Drawing.Size(669, 80);
+            this.statementAllocationControl2.TabIndex = 1;
+            // 
+            // statementAllocationControl1
+            // 
+            this.statementAllocationControl1.BackColor = System.Drawing.Color.MistyRose;
+            this.statementAllocationControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.statementAllocationControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.statementAllocationControl1.Location = new System.Drawing.Point(0, 0);
+            this.statementAllocationControl1.Name = "statementAllocationControl1";
+            this.statementAllocationControl1.Size = new System.Drawing.Size(669, 80);
+            this.statementAllocationControl1.TabIndex = 0;
             // 
             // FundAllocationControl
             // 
