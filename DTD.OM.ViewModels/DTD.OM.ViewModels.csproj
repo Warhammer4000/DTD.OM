@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Accounts\BreakDown.cs" />
+    <Compile Include="Accounts\DailyExpense.cs" />
     <Compile Include="Accounts\ItemExpense.cs" />
     <Compile Include="Accounts\Statement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

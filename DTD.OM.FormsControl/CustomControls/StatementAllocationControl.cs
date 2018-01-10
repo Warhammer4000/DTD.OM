@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,7 +19,7 @@ namespace DTD.OM.FormsControl.CustomControls
         public StatementAllocationControl()
         {
             InitializeComponent();
-            Statement=new Statement();
+            Statement=new Statement(DateTime.Today.Month,DateTime.Today.Year);
         }
 
         public StatementAllocationControl(Statement statement)
@@ -27,11 +28,12 @@ namespace DTD.OM.FormsControl.CustomControls
             Statement = statement;
             Allocated.Value = Statement.Allocated;
             Left.Value = Statement.Left;
+            StatementLable.Text=new DateTimeFormatInfo().GetMonthName(statement.Month)+@","+statement.Year;
         }
 
         private void BreakDownButton_Click(object sender, EventArgs e)
         {
-            var form= new StatementBreakdownForm(Statement.BreakDown);
+            var form= new StatementBreakdownForm(Statement.BreakDown,Statement.Month,Statement.Year);
             if (form.ShowDialog() == DialogResult.OK)
             {
 

@@ -36,7 +36,7 @@
             this.Left = new System.Windows.Forms.NumericUpDown();
             this.Allocated = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.StatementLable = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Allocated)).BeginInit();
@@ -139,16 +139,16 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Allocated";
             // 
-            // label1
+            // StatementLable
             // 
-            this.label1.AutoSize = true;
-            this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 24);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Statement";
+            this.StatementLable.AutoSize = true;
+            this.StatementLable.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StatementLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatementLable.Location = new System.Drawing.Point(0, 0);
+            this.StatementLable.Name = "StatementLable";
+            this.StatementLable.Size = new System.Drawing.Size(93, 24);
+            this.StatementLable.TabIndex = 19;
+            this.StatementLable.Text = "Statement";
             // 
             // StatementAllocationControl
             // 
@@ -156,7 +156,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MistyRose;
             this.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.StatementLable);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.BreakdownButton);
@@ -181,7 +181,7 @@
         public System.Windows.Forms.NumericUpDown Left;
         public System.Windows.Forms.NumericUpDown Allocated;
         public System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label StatementLable;
         public System.Windows.Forms.Label label3;
     }
 }

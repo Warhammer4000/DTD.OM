@@ -1,6 +1,6 @@
 ﻿namespace DTD.OM.FormsControl.CustomControls
 {
-    partial class DailyExpenseControl
+    partial class ItemExpenseControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -96,7 +96,7 @@
             this.RemoveButton.UseVisualStyleBackColor = false;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
-            // DailyExpenseControl
+            // ItemExpenseControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -107,7 +107,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ItemNameBox);
             this.Controls.Add(this.label1);
-            this.Name = "DailyExpenseControl";
+            this.Name = "ItemExpenseControl";
             this.Size = new System.Drawing.Size(562, 25);
             ((System.ComponentModel.ISupportInitialize)(this.value)).EndInit();
             this.ResumeLayout(false);

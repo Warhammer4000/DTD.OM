@@ -11,17 +11,17 @@ using DTD.OM.ViewModels.Accounts;
 
 namespace DTD.OM.FormsControl.CustomControls
 {
-    public partial class DailyExpenseControl : UserControl
+    public partial class ItemExpenseControl : UserControl
     {
         public ItemExpense DailyExpense { get; set; }
 
-        public DailyExpenseControl()
+        public ItemExpenseControl()
         {
             InitializeComponent();
             DailyExpense= new ItemExpense();
         }
 
-        public DailyExpenseControl(ItemExpense dailyExpense)
+        public ItemExpenseControl(ItemExpense dailyExpense)
         {
             InitializeComponent();
             DailyExpense = dailyExpense;

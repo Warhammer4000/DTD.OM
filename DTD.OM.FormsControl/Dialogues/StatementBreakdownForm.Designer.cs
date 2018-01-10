@@ -1,4 +1,6 @@
-﻿namespace DTD.OM.FormsControl.Dialogues
+﻿using System.Windows.Forms;
+
+namespace DTD.OM.FormsControl.Dialogues
 {
     partial class StatementBreakdownForm
     {
@@ -30,7 +32,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.DayBox = new System.Windows.Forms.ComboBox();
             this.MonthLable = new System.Windows.Forms.Label();
             this.YearLable = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -41,12 +43,12 @@
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.dailyThreashold = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.SaveButton = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.Total = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.AddItem = new System.Windows.Forms.Button();
@@ -55,9 +57,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dailyThreashold)).BeginInit();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Total)).BeginInit();
             this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.DayBox);
             this.panel1.Controls.Add(this.MonthLable);
             this.panel1.Controls.Add(this.YearLable);
             this.panel1.Controls.Add(this.numericUpDown2);
@@ -89,14 +91,14 @@
             this.label5.TabIndex = 7;
             this.label5.Text = "Day";
             // 
-            // comboBox1
+            // DayBox
             // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(721, 0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(60, 21);
-            this.comboBox1.TabIndex = 6;
+            this.DayBox.Dock = System.Windows.Forms.DockStyle.Right;
+            this.DayBox.FormattingEnabled = true;
+            this.DayBox.Location = new System.Drawing.Point(721, 0);
+            this.DayBox.Name = "DayBox";
+            this.DayBox.Size = new System.Drawing.Size(60, 21);
+            this.DayBox.TabIndex = 6;
             // 
             // MonthLable
             // 
@@ -210,7 +212,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.numericUpDown3);
+            this.panel3.Controls.Add(this.dailyThreashold);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 24);
@@ -218,13 +220,13 @@
             this.panel3.Size = new System.Drawing.Size(702, 25);
             this.panel3.TabIndex = 2;
             // 
-            // numericUpDown3
+            // dailyThreashold
             // 
-            this.numericUpDown3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.numericUpDown3.Location = new System.Drawing.Point(177, 0);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown3.TabIndex = 3;
+            this.dailyThreashold.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dailyThreashold.Location = new System.Drawing.Point(177, 0);
+            this.dailyThreashold.Name = "dailyThreashold";
+            this.dailyThreashold.Size = new System.Drawing.Size(120, 20);
+            this.dailyThreashold.TabIndex = 3;
             // 
             // label4
             // 
@@ -251,7 +253,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.numericUpDown4);
+            this.panel4.Controls.Add(this.Total);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 362);
             this.panel4.Name = "panel4";
@@ -269,20 +271,20 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Total";
             // 
-            // numericUpDown4
+            // Total
             // 
-            this.numericUpDown4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.numericUpDown4.Enabled = false;
-            this.numericUpDown4.Location = new System.Drawing.Point(582, 0);
-            this.numericUpDown4.Maximum = new decimal(new int[] {
+            this.Total.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Total.Enabled = false;
+            this.Total.Location = new System.Drawing.Point(582, 0);
+            this.Total.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.ReadOnly = true;
-            this.numericUpDown4.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown4.TabIndex = 4;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.Size = new System.Drawing.Size(120, 20);
+            this.Total.TabIndex = 4;
             // 
             // panel5
             // 
@@ -339,10 +341,10 @@
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dailyThreashold)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Total)).EndInit();
             this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -352,7 +354,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox DayBox;
         private System.Windows.Forms.Label MonthLable;
         private System.Windows.Forms.Label YearLable;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
@@ -363,12 +365,12 @@
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown dailyThreashold;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private NumericUpDown Total;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel ViewPanel;
         private System.Windows.Forms.Button AddItem;
