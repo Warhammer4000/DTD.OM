@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.MonthlyPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.Edit = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,7 +39,7 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.flowLayoutPanel1);
+            this.panel1.Controls.Add(this.MonthlyPanel);
             this.panel1.Controls.Add(this.Edit);
             this.panel1.Controls.Add(this.AddButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -48,15 +48,15 @@
             this.panel1.Size = new System.Drawing.Size(200, 526);
             this.panel1.TabIndex = 1;
             // 
-            // flowLayoutPanel1
+            // MonthlyPanel
             // 
-            this.flowLayoutPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 80);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 446);
-            this.flowLayoutPanel1.TabIndex = 3;
+            this.MonthlyPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.MonthlyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MonthlyPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.MonthlyPanel.Location = new System.Drawing.Point(0, 80);
+            this.MonthlyPanel.Name = "MonthlyPanel";
+            this.MonthlyPanel.Size = new System.Drawing.Size(200, 446);
+            this.MonthlyPanel.TabIndex = 3;
             // 
             // Edit
             // 
@@ -125,7 +125,7 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel ViewPanel;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel MonthlyPanel;
         private System.Windows.Forms.Button Edit;
     }
 }

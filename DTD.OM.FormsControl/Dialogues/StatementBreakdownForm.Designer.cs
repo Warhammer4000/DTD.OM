@@ -35,9 +35,9 @@ namespace DTD.OM.FormsControl.Dialogues
             this.DayBox = new System.Windows.Forms.ComboBox();
             this.MonthLable = new System.Windows.Forms.Label();
             this.YearLable = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.Left = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.Allocation = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -53,8 +53,8 @@ namespace DTD.OM.FormsControl.Dialogues
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.AddItem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Left)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Allocation)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dailyThreashold)).BeginInit();
@@ -70,9 +70,9 @@ namespace DTD.OM.FormsControl.Dialogues
             this.panel1.Controls.Add(this.DayBox);
             this.panel1.Controls.Add(this.MonthLable);
             this.panel1.Controls.Add(this.YearLable);
-            this.panel1.Controls.Add(this.numericUpDown2);
+            this.panel1.Controls.Add(this.Left);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.numericUpDown1);
+            this.panel1.Controls.Add(this.Allocation);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -122,20 +122,20 @@ namespace DTD.OM.FormsControl.Dialogues
             this.YearLable.TabIndex = 4;
             this.YearLable.Text = "2018";
             // 
-            // numericUpDown2
+            // Left
             // 
-            this.numericUpDown2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.numericUpDown2.Enabled = false;
-            this.numericUpDown2.Location = new System.Drawing.Point(251, 0);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
+            this.Left.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Left.Enabled = false;
+            this.Left.Location = new System.Drawing.Point(251, 0);
+            this.Left.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.ReadOnly = true;
-            this.numericUpDown2.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown2.TabIndex = 3;
+            this.Left.Name = "Left";
+            this.Left.ReadOnly = true;
+            this.Left.Size = new System.Drawing.Size(120, 20);
+            this.Left.TabIndex = 3;
             // 
             // label2
             // 
@@ -148,20 +148,20 @@ namespace DTD.OM.FormsControl.Dialogues
             this.label2.TabIndex = 2;
             this.label2.Text = "Left";
             // 
-            // numericUpDown1
+            // Allocation
             // 
-            this.numericUpDown1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(92, 0);
-            this.numericUpDown1.Maximum = new decimal(new int[] {
+            this.Allocation.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Allocation.Enabled = false;
+            this.Allocation.Location = new System.Drawing.Point(92, 0);
+            this.Allocation.Maximum = new decimal(new int[] {
             9999999,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.ReadOnly = true;
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 1;
+            this.Allocation.Name = "Allocation";
+            this.Allocation.ReadOnly = true;
+            this.Allocation.Size = new System.Drawing.Size(120, 20);
+            this.Allocation.TabIndex = 1;
             // 
             // label1
             // 
@@ -224,9 +224,15 @@ namespace DTD.OM.FormsControl.Dialogues
             // 
             this.dailyThreashold.Dock = System.Windows.Forms.DockStyle.Left;
             this.dailyThreashold.Location = new System.Drawing.Point(177, 0);
+            this.dailyThreashold.Maximum = new decimal(new int[] {
+            999999,
+            0,
+            0,
+            0});
             this.dailyThreashold.Name = "dailyThreashold";
             this.dailyThreashold.Size = new System.Drawing.Size(120, 20);
             this.dailyThreashold.TabIndex = 3;
+            this.dailyThreashold.ValueChanged += new System.EventHandler(this.dailyThreashold_ValueChanged);
             // 
             // label4
             // 
@@ -249,6 +255,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.SaveButton.TabIndex = 4;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // panel4
             // 
@@ -285,6 +292,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.Total.ReadOnly = true;
             this.Total.Size = new System.Drawing.Size(120, 20);
             this.Total.TabIndex = 4;
+            this.Total.ValueChanged += new System.EventHandler(this.Total_ValueChanged);
             // 
             // panel5
             // 
@@ -309,7 +317,7 @@ namespace DTD.OM.FormsControl.Dialogues
             // 
             // AddItem
             // 
-            this.AddItem.BackColor = System.Drawing.Color.Olive;
+            this.AddItem.BackColor = System.Drawing.Color.Beige;
             this.AddItem.Dock = System.Windows.Forms.DockStyle.Top;
             this.AddItem.Location = new System.Drawing.Point(0, 0);
             this.AddItem.Name = "AddItem";
@@ -335,8 +343,8 @@ namespace DTD.OM.FormsControl.Dialogues
             this.Text = "Breakdown";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Left)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Allocation)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -357,9 +365,9 @@ namespace DTD.OM.FormsControl.Dialogues
         private System.Windows.Forms.ComboBox DayBox;
         private System.Windows.Forms.Label MonthLable;
         private System.Windows.Forms.Label YearLable;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.NumericUpDown Left;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown Allocation;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RichTextBox richTextBox1;

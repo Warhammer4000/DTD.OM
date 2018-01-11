@@ -3,6 +3,6 @@
     public class ItemExpense
     {
         public string ItemName { get; set; }
-        public double Cost { get; set; }
+        public decimal Cost { get; set; }
     }
 }

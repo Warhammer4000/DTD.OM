@@ -15,7 +15,7 @@ namespace DTD.OM.ViewModels.Accounts
         {
             Month = month;
             Year = year;
-            BreakDown=new BreakDown(DateTime.DaysInMonth(Year,Month));
+            BreakDown=new BreakDown(month,year);
             Month = 1;
         }
 

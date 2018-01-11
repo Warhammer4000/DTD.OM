@@ -15,15 +15,21 @@ namespace DTD.OM.FormsControl.Dialogues
 {
     public partial class StatementBreakdownForm : Form
     {
+        public Statement Statement { get; set; }
         public BreakDown Breakdown { get; set; }
-        public StatementBreakdownForm(BreakDown breakDown, int month,int year)
+        
+        private DailyExpense DailyExpense { get; set; }
+        public StatementBreakdownForm(Statement statement)
         {
             InitializeComponent();
-            Breakdown = breakDown;
-            MonthLable.Text = @","+new DateTimeFormatInfo().GetMonthName(month)+ @",";
-            YearLable.Text = year.ToString();
-
-            for (int i=1;i<=DateTime.DaysInMonth(year,month);i++)
+            Statement = statement;
+            Breakdown = Statement.BreakDown;
+            
+            Allocation.Value = Statement.Allocated;
+            MonthLable.Text = @","+new DateTimeFormatInfo().GetMonthName(Breakdown.Month)+ @",";
+            YearLable.Text = Breakdown.Year.ToString();
+            int days = DateTime.DaysInMonth(Breakdown.Year, Breakdown.Month);
+            for (int i=1;i<=days;i++)
             {
                 DayBox.Items.Add(i);
             }
@@ -35,24 +41,67 @@ namespace DTD.OM.FormsControl.Dialogues
 
         private void InitializeData(int day)
         {
-            var dailyExpense = Breakdown.DailyExpenseList[day];
-            Total.Value = dailyExpense.Total;
-            foreach (var itemExpense in dailyExpense.ItemExpenses)
+            DailyExpense = Breakdown.DailyExpenseList[day];
+            Total.Value = DailyExpense.Total;
+            foreach (var itemExpense in DailyExpense.ItemExpenses)
             {
                 var itemExpenseControl = new ItemExpenseControl(itemExpense) { Dock = DockStyle.Top };
+                itemExpenseControl.ItemNameBox.TextChanged += ValueChanged;
+                itemExpenseControl.value.ValueChanged += ValueChanged;
+                itemExpenseControl.RemoveButton.Click += ValueChanged;
                 ViewPanel.Controls.Add(itemExpenseControl);
             }
-            dailyThreashold.Value = dailyExpense.Threshold;
-           
+
+            if (DailyExpense.Threshold == 0)
+            {
+                DailyExpense.Threshold=Statement.Allocated / DateTime.DaysInMonth(Breakdown.Year, Breakdown.Month);
+            }
+            dailyThreashold.Value = DailyExpense.Threshold;
+            
 
 
         }
 
+        private void ValueChanged(object sender, EventArgs e)
+        {
+            decimal sum = 0;
+            foreach (ItemExpenseControl itemExpense in ViewPanel.Controls)
+            {
+                sum += itemExpense.DailyExpense.Cost;
+            }
+
+            Total.Value = sum;
+        }
 
         private void AddItem_Click(object sender, EventArgs e)
         {
-            var dailyExpense= new ItemExpenseControl(){Dock = DockStyle.Top};
-            ViewPanel.Controls.Add(dailyExpense);
+            var itemExpenseControl = new ItemExpenseControl(){Dock = DockStyle.Top};
+            
+            itemExpenseControl.ItemNameBox.TextChanged += ValueChanged;
+            itemExpenseControl.value.ValueChanged += ValueChanged;
+            itemExpenseControl.RemoveButton.Click += ValueChanged;
+            DailyExpense.ItemExpenses.Add(itemExpenseControl.DailyExpense);
+            ViewPanel.Controls.Add(itemExpenseControl);
+        }
+
+       
+
+        private void Total_ValueChanged(object sender, EventArgs e)
+        {
+            Left.Value = Allocation.Value - Total.Value;
+            Statement.Left = Left.Value;
+            DailyExpense.Total = Total.Value;
+        }
+
+        private void dailyThreashold_ValueChanged(object sender, EventArgs e)
+        {
+            DailyExpense.Threshold = dailyThreashold.Value;
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+     
+            DialogResult = DialogResult.OK;
         }
     }
 }

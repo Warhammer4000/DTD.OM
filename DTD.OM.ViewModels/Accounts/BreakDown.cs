@@ -9,7 +9,8 @@ namespace DTD.OM.ViewModels.Accounts
 {
     public class BreakDown
     {
-       
+        public int Month { get; set; }
+        public int Year { get; set; }
         public List<DailyExpense> DailyExpenseList { get; set; }
 
         public BreakDown(List<DailyExpense> dailyExpense)
@@ -17,10 +18,12 @@ namespace DTD.OM.ViewModels.Accounts
             DailyExpenseList = dailyExpense;
         }
 
-        public BreakDown(int days)
+        public BreakDown(int month,int year)
         {
+            Month = month;
+            Year = year;
             DailyExpenseList=new List<DailyExpense>();
-            for (int i = 0; i < days; i++)
+            for (int i = 0; i < DateTime.DaysInMonth(Year, Month); i++)
             {
                 DailyExpenseList.Add(new DailyExpense());
             }

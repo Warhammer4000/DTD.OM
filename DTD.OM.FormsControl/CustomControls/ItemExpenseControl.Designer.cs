@@ -57,7 +57,7 @@
             this.ItemNameBox.Name = "ItemNameBox";
             this.ItemNameBox.Size = new System.Drawing.Size(121, 21);
             this.ItemNameBox.TabIndex = 3;
-            this.ItemNameBox.SelectedIndexChanged += new System.EventHandler(this.ItemNameBox_SelectedIndexChanged);
+            this.ItemNameBox.TextChanged += new System.EventHandler(this.ItemNameBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -119,8 +119,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button RemoveButton;
         public System.Windows.Forms.ComboBox ItemNameBox;
         public System.Windows.Forms.NumericUpDown value;
+        public System.Windows.Forms.Button RemoveButton;
     }
 }

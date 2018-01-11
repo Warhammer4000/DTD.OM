@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{89872872-D347-483A-B640-6F6B0EB9629E}</ProjectGuid>
+    <ProjectGuid>{64EB4F87-C63D-471E-B1D7-09210F679C61}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DTD.OM.ViewModels</RootNamespace>
-    <AssemblyName>DTD.OM.ViewModels</AssemblyName>
+    <RootNamespace>DTD.OM.Globals</RootNamespace>
+    <AssemblyName>DTD.OM.Globals</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,14 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounts\BreakDown.cs" />
-    <Compile Include="Accounts\DailyExpense.cs" />
-    <Compile Include="Accounts\FinancialStatements.cs" />
-    <Compile Include="Accounts\FundAllocation.cs" />
-    <Compile Include="Accounts\ItemExpense.cs" />
-    <Compile Include="Accounts\MonthlyAllocation.cs" />
-    <Compile Include="Accounts\Statement.cs" />
+    <Compile Include="ViewModelGlobals.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DTD.OM.ViewModels\DTD.OM.ViewModels.csproj">
+      <Project>{89872872-D347-483A-B640-6F6B0EB9629E}</Project>
+      <Name>DTD.OM.ViewModels</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

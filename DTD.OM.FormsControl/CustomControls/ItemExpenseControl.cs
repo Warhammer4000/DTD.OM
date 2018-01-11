@@ -26,7 +26,7 @@ namespace DTD.OM.FormsControl.CustomControls
             InitializeComponent();
             DailyExpense = dailyExpense;
             ItemNameBox.Text = dailyExpense.ItemName;
-            value.Value = (decimal) dailyExpense.Cost;
+            value.Value =  dailyExpense.Cost;
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -42,7 +42,7 @@ namespace DTD.OM.FormsControl.CustomControls
 
         private void value_ValueChanged(object sender, EventArgs e)
         {
-            DailyExpense.Cost = (double)value.Value;
+            DailyExpense.Cost = value.Value;
         }
     }
 }
