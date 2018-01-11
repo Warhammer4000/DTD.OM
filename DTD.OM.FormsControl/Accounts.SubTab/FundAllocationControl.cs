@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTD.OM.FormsControl.CustomControls;
 using DTD.OM.FormsControl.Dialogues;
@@ -16,17 +10,13 @@ namespace DTD.OM.FormsControl.Accounts.SubTab
     public partial class FundAllocationControl : UserControl
     {
         public FundAllocation FundAllocation { get; set; }
-        public FundAllocationControl()
-        {
-            InitializeComponent();
-            FundAllocation=new FundAllocation();
-            Globals.ViewModelGlobals.FundAllocation = FundAllocation;
-        }
+     
 
         public FundAllocationControl(FundAllocation fundAllocation)
         {
             InitializeComponent();
             FundAllocation = fundAllocation;
+            UpdateView();
             //Globals.ViewModelGlobals.FundAllocation = FundAllocation; will probably come from globals
         }
 
@@ -46,9 +36,9 @@ namespace DTD.OM.FormsControl.Accounts.SubTab
         private void UpdateView()
         {
             MonthlyPanel.Controls.Clear();
-            foreach (MonthlyAllocation allocation in FundAllocation.MonthlyAllocations)
+            foreach (var allocation in FundAllocation.MonthlyAllocations)
             {
-                RadioButton radioButton = new RadioButton(){Name = allocation.ViewName,Text = allocation.ViewName};
+                var radioButton = new RadioButton(){Name = allocation.ViewName,Text = allocation.ViewName};
                 radioButton.CheckedChanged += RadioButton_CheckedChanged;
                 MonthlyPanel.Controls.Add(radioButton);
             }
@@ -57,8 +47,8 @@ namespace DTD.OM.FormsControl.Accounts.SubTab
 
         private void RadioButton_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton radioButton = (RadioButton) sender;
-            MonthlyAllocation allocation = FundAllocation.MonthlyAllocations.Find(r => r.ViewName == radioButton.Name);
+            var radioButton = (RadioButton) sender;
+            var allocation = FundAllocation.MonthlyAllocations.Find(r => r.ViewName == radioButton.Name);
             ShowAllocations(allocation.Statements);
         }
 

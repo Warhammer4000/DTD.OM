@@ -82,6 +82,8 @@
             this.value.Name = "value";
             this.value.Size = new System.Drawing.Size(120, 20);
             this.value.TabIndex = 5;
+            this.value.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.value.ThousandsSeparator = true;
             this.value.ValueChanged += new System.EventHandler(this.value_ValueChanged);
             // 
             // RemoveButton

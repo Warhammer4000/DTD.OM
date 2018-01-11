@@ -113,6 +113,8 @@
             this.Left.ReadOnly = true;
             this.Left.Size = new System.Drawing.Size(116, 20);
             this.Left.TabIndex = 7;
+            this.Left.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Left.ThousandsSeparator = true;
             // 
             // Allocated
             // 
@@ -126,6 +128,8 @@
             this.Allocated.Name = "Allocated";
             this.Allocated.Size = new System.Drawing.Size(116, 20);
             this.Allocated.TabIndex = 1;
+            this.Allocated.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Allocated.ThousandsSeparator = true;
             this.Allocated.ValueChanged += new System.EventHandler(this.Allocated_ValueChanged);
             // 
             // label2

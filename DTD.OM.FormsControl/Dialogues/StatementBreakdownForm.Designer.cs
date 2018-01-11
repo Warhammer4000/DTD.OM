@@ -99,6 +99,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.DayBox.Name = "DayBox";
             this.DayBox.Size = new System.Drawing.Size(60, 21);
             this.DayBox.TabIndex = 6;
+            this.DayBox.SelectedIndexChanged += new System.EventHandler(this.DayBox_SelectedIndexChanged);
             // 
             // MonthLable
             // 
@@ -136,6 +137,8 @@ namespace DTD.OM.FormsControl.Dialogues
             this.Left.ReadOnly = true;
             this.Left.Size = new System.Drawing.Size(120, 20);
             this.Left.TabIndex = 3;
+            this.Left.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Left.ThousandsSeparator = true;
             // 
             // label2
             // 
@@ -162,6 +165,8 @@ namespace DTD.OM.FormsControl.Dialogues
             this.Allocation.ReadOnly = true;
             this.Allocation.Size = new System.Drawing.Size(120, 20);
             this.Allocation.TabIndex = 1;
+            this.Allocation.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Allocation.ThousandsSeparator = true;
             // 
             // label1
             // 
@@ -232,6 +237,8 @@ namespace DTD.OM.FormsControl.Dialogues
             this.dailyThreashold.Name = "dailyThreashold";
             this.dailyThreashold.Size = new System.Drawing.Size(120, 20);
             this.dailyThreashold.TabIndex = 3;
+            this.dailyThreashold.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.dailyThreashold.ThousandsSeparator = true;
             this.dailyThreashold.ValueChanged += new System.EventHandler(this.dailyThreashold_ValueChanged);
             // 
             // label4
@@ -292,6 +299,8 @@ namespace DTD.OM.FormsControl.Dialogues
             this.Total.ReadOnly = true;
             this.Total.Size = new System.Drawing.Size(120, 20);
             this.Total.TabIndex = 4;
+            this.Total.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Total.ThousandsSeparator = true;
             this.Total.ValueChanged += new System.EventHandler(this.Total_ValueChanged);
             // 
             // panel5

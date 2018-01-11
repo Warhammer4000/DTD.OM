@@ -14,12 +14,7 @@ namespace DTD.OM.FormsControl.Accounts.SubTab
     public partial class FinancialStatementControl : UserControl
     {
         public  FinancialStatements FinancialStatements { get; set; }
-        public FinancialStatementControl()
-        {
-            InitializeComponent();
-            FinancialStatements=new FinancialStatements();
-            Globals.ViewModelGlobals.FinancialStatements = FinancialStatements;
-        }
+      
 
         public FinancialStatementControl(FinancialStatements financialStatements)
         {

@@ -36,13 +36,14 @@ namespace DTD.OM.FormsControl.Dialogues
 
             DayBox.SelectedIndex = DateTime.Today.Day-1;
 
-            InitializeData(DateTime.Today.Day);
+           
         }
 
         private void InitializeData(int day)
         {
             DailyExpense = Breakdown.DailyExpenseList[day];
             Total.Value = DailyExpense.Total;
+            ViewPanel.Controls.Clear();
             foreach (var itemExpense in DailyExpense.ItemExpenses)
             {
                 var itemExpenseControl = new ItemExpenseControl(itemExpense) { Dock = DockStyle.Top };
@@ -80,7 +81,7 @@ namespace DTD.OM.FormsControl.Dialogues
             itemExpenseControl.ItemNameBox.TextChanged += ValueChanged;
             itemExpenseControl.value.ValueChanged += ValueChanged;
             itemExpenseControl.RemoveButton.Click += ValueChanged;
-            DailyExpense.ItemExpenses.Add(itemExpenseControl.DailyExpense);
+        
             ViewPanel.Controls.Add(itemExpenseControl);
         }
 
@@ -90,7 +91,7 @@ namespace DTD.OM.FormsControl.Dialogues
         {
             Left.Value = Allocation.Value - Total.Value;
             Statement.Left = Left.Value;
-            DailyExpense.Total = Total.Value;
+            
         }
 
         private void dailyThreashold_ValueChanged(object sender, EventArgs e)
@@ -100,8 +101,17 @@ namespace DTD.OM.FormsControl.Dialogues
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
-     
+            DailyExpense.Total = Total.Value;
+            foreach (ItemExpenseControl itemExpense in ViewPanel.Controls)
+            {
+                DailyExpense.ItemExpenses.Add(itemExpense.DailyExpense);
+            }
             DialogResult = DialogResult.OK;
+        }
+
+        private void DayBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            InitializeData(DayBox.SelectedIndex-1);
         }
     }
 }
