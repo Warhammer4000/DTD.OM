@@ -32,11 +32,11 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ValueBox = new System.Windows.Forms.TextBox();
-            this.AddButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkedListBox = new System.Windows.Forms.CheckedListBox();
             this.RemoveButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.AddButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,17 +57,6 @@
             this.ValueBox.Size = new System.Drawing.Size(173, 20);
             this.ValueBox.TabIndex = 5;
             // 
-            // AddButton
-            // 
-            this.AddButton.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.AddButton.Location = new System.Drawing.Point(367, 143);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(90, 38);
-            this.AddButton.TabIndex = 7;
-            this.AddButton.Text = "+Add";
-            this.AddButton.UseVisualStyleBackColor = false;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.checkedListBox);
@@ -86,19 +75,23 @@
             this.checkedListBox.FormattingEnabled = true;
             this.checkedListBox.Location = new System.Drawing.Point(0, 0);
             this.checkedListBox.Name = "checkedListBox";
-            this.checkedListBox.Size = new System.Drawing.Size(254, 416);
+            this.checkedListBox.Size = new System.Drawing.Size(254, 402);
             this.checkedListBox.TabIndex = 6;
             this.checkedListBox.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.checkedListBox_ItemCheck);
             // 
             // RemoveButton
             // 
             this.RemoveButton.BackColor = System.Drawing.Color.Red;
+            this.RemoveButton.BackgroundImage = global::DTD.OM.FormsControl.Properties.Resources.database__1_;
+            this.RemoveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.RemoveButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.RemoveButton.Location = new System.Drawing.Point(0, 416);
+            this.RemoveButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RemoveButton.Location = new System.Drawing.Point(0, 402);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(254, 36);
+            this.RemoveButton.Size = new System.Drawing.Size(254, 50);
             this.RemoveButton.TabIndex = 5;
             this.RemoveButton.Text = "Remove";
+            this.RemoveButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.RemoveButton.UseVisualStyleBackColor = false;
             this.RemoveButton.Visible = false;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
@@ -114,6 +107,18 @@
             this.label1.Size = new System.Drawing.Size(269, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Add New Financial Statement";
+            // 
+            // AddButton
+            // 
+            this.AddButton.BackColor = System.Drawing.Color.PaleGreen;
+            this.AddButton.BackgroundImage = global::DTD.OM.FormsControl.Properties.Resources.database;
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AddButton.Location = new System.Drawing.Point(463, 82);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(40, 38);
+            this.AddButton.TabIndex = 7;
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // FinancialStatementControl
             // 

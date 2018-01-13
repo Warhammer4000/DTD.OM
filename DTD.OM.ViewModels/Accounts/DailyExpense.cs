@@ -11,17 +11,20 @@ namespace DTD.OM.ViewModels.Accounts
         public int Day { get; set; }
         public decimal Threshold { get; set; }
         public decimal Total { get; set; }
+        public Stack<Log> DailyLogs { get; set; }
         public List<ItemExpense> ItemExpenses { get; set; }
 
-        public DailyExpense(List<ItemExpense> itemExpenses)
+        //For Database fetched design
+        public DailyExpense(List<ItemExpense> itemExpenses,Stack<Log> dailyLogs)
         {
             ItemExpenses = itemExpenses;
+            DailyLogs = dailyLogs;
         }
 
         public DailyExpense()
         {
             ItemExpenses = new List<ItemExpense>();
-
+            DailyLogs=new Stack<Log>();
         }
     }
 }

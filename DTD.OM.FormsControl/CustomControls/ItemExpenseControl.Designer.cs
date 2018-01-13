@@ -88,11 +88,12 @@
             // 
             // RemoveButton
             // 
-            this.RemoveButton.BackColor = System.Drawing.Color.LightCoral;
+            this.RemoveButton.BackColor = System.Drawing.Color.Coral;
+            this.RemoveButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RemoveButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.RemoveButton.Location = new System.Drawing.Point(487, 0);
+            this.RemoveButton.Location = new System.Drawing.Point(489, 0);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 25);
+            this.RemoveButton.Size = new System.Drawing.Size(73, 25);
             this.RemoveButton.TabIndex = 6;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = false;
@@ -102,7 +103,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.value);

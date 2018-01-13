@@ -12,7 +12,7 @@ using DTD.OM.ViewModels.Accounts;
 
 namespace DTD.OM.FormsControl.Dialogues
 {
-    public partial class NewStatement : Form
+    public partial class NewStatement : MetroFramework.Forms.MetroForm
     {
         public MonthlyAllocation MonthlyAllocation { get; set; }
         

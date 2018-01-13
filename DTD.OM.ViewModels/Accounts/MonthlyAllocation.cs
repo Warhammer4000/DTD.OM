@@ -11,7 +11,6 @@ namespace DTD.OM.ViewModels.Accounts
     {
         public int Month { get; set; }
         public int Year { get; set; }
-
         public string ViewName => new DateTimeFormatInfo().GetMonthName(Month) + "," + Year;
 
         public List<Statement> Statements { get; set; }
@@ -32,6 +31,10 @@ namespace DTD.OM.ViewModels.Accounts
         public MonthlyAllocation(List<Statement> statements)
         {
             Statements = statements;
+        }
+        public MonthlyAllocation()
+        {
+            
         }
 
 

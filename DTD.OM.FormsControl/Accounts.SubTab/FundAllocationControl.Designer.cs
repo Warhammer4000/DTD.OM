@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.MonthlyPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.Edit = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
@@ -40,45 +39,39 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.MonthlyPanel);
-            this.panel1.Controls.Add(this.Edit);
             this.panel1.Controls.Add(this.AddButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(669, 0);
+            this.panel1.Location = new System.Drawing.Point(736, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 526);
+            this.panel1.Size = new System.Drawing.Size(133, 526);
             this.panel1.TabIndex = 1;
             // 
             // MonthlyPanel
             // 
+            this.MonthlyPanel.BackColor = System.Drawing.SystemColors.HighlightText;
             this.MonthlyPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.MonthlyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MonthlyPanel.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.MonthlyPanel.Location = new System.Drawing.Point(0, 80);
+            this.MonthlyPanel.Location = new System.Drawing.Point(0, 53);
             this.MonthlyPanel.Name = "MonthlyPanel";
-            this.MonthlyPanel.Size = new System.Drawing.Size(200, 446);
-            this.MonthlyPanel.TabIndex = 3;
-            // 
-            // Edit
-            // 
-            this.Edit.BackColor = System.Drawing.Color.Khaki;
-            this.Edit.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Edit.Location = new System.Drawing.Point(0, 40);
-            this.Edit.Name = "Edit";
-            this.Edit.Size = new System.Drawing.Size(200, 40);
-            this.Edit.TabIndex = 2;
-            this.Edit.Text = "Edit";
-            this.Edit.UseVisualStyleBackColor = false;
-            this.Edit.Visible = false;
+            this.MonthlyPanel.Size = new System.Drawing.Size(133, 473);
+            this.MonthlyPanel.TabIndex = 6;
             // 
             // AddButton
             // 
             this.AddButton.BackColor = System.Drawing.Color.YellowGreen;
+            this.AddButton.BackgroundImage = global::DTD.OM.FormsControl.Properties.Resources.add;
+            this.AddButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.AddButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AddButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.AddButton.Location = new System.Drawing.Point(0, 0);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(200, 40);
+            this.AddButton.Size = new System.Drawing.Size(133, 53);
             this.AddButton.TabIndex = 0;
-            this.AddButton.Text = "+Add";
+            this.AddButton.Text = "Add";
+            this.AddButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.AddButton.UseVisualStyleBackColor = false;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
@@ -96,10 +89,11 @@
             // ViewPanel
             // 
             this.ViewPanel.AutoScroll = true;
+            this.ViewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewPanel.Location = new System.Drawing.Point(0, 24);
             this.ViewPanel.Name = "ViewPanel";
-            this.ViewPanel.Size = new System.Drawing.Size(669, 502);
+            this.ViewPanel.Size = new System.Drawing.Size(736, 502);
             this.ViewPanel.TabIndex = 4;
             // 
             // FundAllocationControl
@@ -126,6 +120,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel ViewPanel;
         private System.Windows.Forms.FlowLayoutPanel MonthlyPanel;
-        private System.Windows.Forms.Button Edit;
     }
 }

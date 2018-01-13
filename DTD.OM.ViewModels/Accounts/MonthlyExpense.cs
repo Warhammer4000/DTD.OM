@@ -7,25 +7,33 @@ using System.Threading.Tasks;
 
 namespace DTD.OM.ViewModels.Accounts
 {
-    public class BreakDown
+    public class MonthlyExpense
     {
         public int Month { get; set; }
         public int Year { get; set; }
         public List<DailyExpense> DailyExpenseList { get; set; }
+        public Stack<Log> MonthlyLog { get; set; }
 
-        public BreakDown(List<DailyExpense> dailyExpense)
+        //For Database Oriented
+        public MonthlyExpense(List<DailyExpense> dailyExpense)
         {
             DailyExpenseList = dailyExpense;
         }
 
-        public BreakDown(int month,int year)
+        //For Serializing 
+        public MonthlyExpense()
+        {
+            
+        }
+
+        public MonthlyExpense(int month,int year)
         {
             Month = month;
             Year = year;
             DailyExpenseList=new List<DailyExpense>();
             for (int i = 0; i < DateTime.DaysInMonth(Year, Month); i++)
             {
-                DailyExpenseList.Add(new DailyExpense());
+                DailyExpenseList.Add(new DailyExpense(){Day = i+1});
             }
         }
     }

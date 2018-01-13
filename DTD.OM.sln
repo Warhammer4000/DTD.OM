@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.OM.ViewModels", "DTD.OM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.OM.Globals", "DTD.OM.Globals\DTD.OM.Globals.csproj", "{64EB4F87-C63D-471E-B1D7-09210F679C61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.OM.Serializer", "DTD.OM.Serializer\DTD.OM.Serializer.csproj", "{A9E6CE78-4D48-4775-8E49-1352DE971466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTD.OM.Reporting", "DTD.OM.Reporting\DTD.OM.Reporting.csproj", "{E00907E1-03D8-4882-BBBB-E31D59A3D6F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{64EB4F87-C63D-471E-B1D7-09210F679C61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64EB4F87-C63D-471E-B1D7-09210F679C61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64EB4F87-C63D-471E-B1D7-09210F679C61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E6CE78-4D48-4775-8E49-1352DE971466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E6CE78-4D48-4775-8E49-1352DE971466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E6CE78-4D48-4775-8E49-1352DE971466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E6CE78-4D48-4775-8E49-1352DE971466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E00907E1-03D8-4882-BBBB-E31D59A3D6F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E00907E1-03D8-4882-BBBB-E31D59A3D6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E00907E1-03D8-4882-BBBB-E31D59A3D6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E00907E1-03D8-4882-BBBB-E31D59A3D6F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

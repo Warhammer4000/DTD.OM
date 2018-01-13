@@ -40,7 +40,7 @@
             this.MonthBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.MonthBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.MonthBox.FormattingEnabled = true;
-            this.MonthBox.Location = new System.Drawing.Point(69, 97);
+            this.MonthBox.Location = new System.Drawing.Point(122, 30);
             this.MonthBox.Name = "MonthBox";
             this.MonthBox.Size = new System.Drawing.Size(121, 21);
             this.MonthBox.TabIndex = 0;
@@ -51,7 +51,7 @@
             this.YearBox.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.YearBox.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.YearBox.FormattingEnabled = true;
-            this.YearBox.Location = new System.Drawing.Point(317, 97);
+            this.YearBox.Location = new System.Drawing.Point(122, 69);
             this.YearBox.Name = "YearBox";
             this.YearBox.Size = new System.Drawing.Size(121, 21);
             this.YearBox.TabIndex = 1;
@@ -59,11 +59,10 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.button1.Location = new System.Drawing.Point(0, 168);
+            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button1.Location = new System.Drawing.Point(291, 48);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(527, 46);
+            this.button1.Size = new System.Drawing.Size(146, 42);
             this.button1.TabIndex = 2;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
@@ -73,7 +72,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(99, 74);
+            this.label1.Location = new System.Drawing.Point(50, 30);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 3;
@@ -83,7 +82,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(351, 74);
+            this.label2.Location = new System.Drawing.Point(50, 69);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 20);
             this.label2.TabIndex = 4;
@@ -93,15 +92,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(527, 214);
+            this.ClientSize = new System.Drawing.Size(527, 124);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.YearBox);
             this.Controls.Add(this.MonthBox);
             this.Name = "NewStatement";
-            this.Text = "NewStatement";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -40,13 +40,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounts\BreakDown.cs" />
+    <Compile Include="Accounts\MonthlyExpense.cs" />
     <Compile Include="Accounts\DailyExpense.cs" />
     <Compile Include="Accounts\FinancialStatements.cs" />
     <Compile Include="Accounts\FundAllocation.cs" />
     <Compile Include="Accounts\ItemExpense.cs" />
     <Compile Include="Accounts\MonthlyAllocation.cs" />
     <Compile Include="Accounts\Statement.cs" />
+    <Compile Include="Log.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
