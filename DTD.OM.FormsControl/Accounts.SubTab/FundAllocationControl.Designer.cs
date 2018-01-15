@@ -28,12 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.MonthlyPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.AddButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewPanel = new System.Windows.Forms.Panel();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.newStatementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -90,11 +94,26 @@
             // 
             this.ViewPanel.AutoScroll = true;
             this.ViewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ViewPanel.ContextMenuStrip = this.contextMenuStrip1;
             this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ViewPanel.Location = new System.Drawing.Point(0, 24);
             this.ViewPanel.Name = "ViewPanel";
             this.ViewPanel.Size = new System.Drawing.Size(736, 502);
             this.ViewPanel.TabIndex = 4;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newStatementToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 26);
+            // 
+            // newStatementToolStripMenuItem
+            // 
+            this.newStatementToolStripMenuItem.Name = "newStatementToolStripMenuItem";
+            this.newStatementToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.newStatementToolStripMenuItem.Text = "New Statement";
+            this.newStatementToolStripMenuItem.Click += new System.EventHandler(this.newStatementToolStripMenuItem_Click);
             // 
             // FundAllocationControl
             // 
@@ -108,6 +127,7 @@
             this.Name = "FundAllocationControl";
             this.Size = new System.Drawing.Size(869, 526);
             this.panel1.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -120,5 +140,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel ViewPanel;
         private System.Windows.Forms.FlowLayoutPanel MonthlyPanel;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem newStatementToolStripMenuItem;
     }
 }

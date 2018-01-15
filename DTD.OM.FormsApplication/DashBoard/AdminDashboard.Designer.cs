@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminDashboard));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LogOutButton = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Report = new System.Windows.Forms.Button();
             this.AccountingButton = new System.Windows.Forms.Button();
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -74,25 +74,12 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.Report);
             this.panel2.Controls.Add(this.AccountingButton);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(20, 97);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(68, 430);
             this.panel2.TabIndex = 4;
-            // 
-            // Report
-            // 
-            this.Report.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.Report.BackgroundImage = global::DTD.OM.FormsApplication.Properties.Resources.chart;
-            this.Report.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Report.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Report.Location = new System.Drawing.Point(0, 62);
-            this.Report.Name = "Report";
-            this.Report.Size = new System.Drawing.Size(68, 62);
-            this.Report.TabIndex = 1;
-            this.Report.UseVisualStyleBackColor = false;
             // 
             // AccountingButton
             // 
@@ -125,6 +112,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AdminDashboard";
             this.Style = MetroFramework.MetroColorStyle.Silver;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -143,6 +131,5 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button AccountingButton;
         private System.Windows.Forms.Panel ViewPanel;
-        private System.Windows.Forms.Button Report;
     }
 }

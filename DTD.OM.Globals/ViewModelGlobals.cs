@@ -9,7 +9,7 @@ namespace DTD.OM.Globals
 {
     public static class ViewModelGlobals
     {
-       public static  FinancialStatements FinancialStatements { get; set; }
+       //public static  FinancialStatements FinancialStatements { get; set; }
        public static FundAllocation FundAllocation { get; set; }
     }
 }

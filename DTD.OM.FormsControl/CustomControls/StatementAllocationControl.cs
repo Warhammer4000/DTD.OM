@@ -19,12 +19,7 @@ namespace DTD.OM.FormsControl.CustomControls
     public partial class StatementAllocationControl : UserControl
     {
         public Statement Statement { get; set; }
-        public StatementAllocationControl(string name)
-        {
-            InitializeComponent();
-            Statement=new Statement(DateTime.Today.Month,DateTime.Today.Year);
-            StatementLable.Text = name;
-        }
+     
 
         public StatementAllocationControl(Statement statement)
         {
@@ -32,7 +27,7 @@ namespace DTD.OM.FormsControl.CustomControls
             Statement = statement;
             Allocated.Value = Statement.Allocated;
             Left.Value = Statement.Left;
-            StatementLable.Text=statement.Name;
+            StatementTextBox.Text=statement.Name;
         }
 
         private void BreakDownButton_Click(object sender, EventArgs e)
@@ -59,7 +54,6 @@ namespace DTD.OM.FormsControl.CustomControls
         {
             Statement.Allocated = Allocated.Value;
           
-
         }
 
         private void Excel_Click(object sender, EventArgs e)
@@ -75,6 +69,22 @@ namespace DTD.OM.FormsControl.CustomControls
                 ExcelMaker excelMaker= new ExcelMaker(fileDialog.FileName);
                 excelMaker.ExportDailyData(Statement);
             }
+        }
+
+        private void ChartButton_Click(object sender, EventArgs e)
+        {
+            StatementChart chart= new StatementChart(Statement);
+            chart.ShowDialog();
+        }
+
+        private void StatementTextBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Statement.Name = StatementTextBox.Text;
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            Dispose();
         }
     }
 }

@@ -13,12 +13,7 @@ namespace DTD.OM.FormsControl.MainTabs
             FundButton_Click(new object(), new EventArgs());
         }
 
-        private void FinancialButton_Click(object sender, EventArgs e)
-        {
-            FinancialStatementControl control= new FinancialStatementControl(Globals.ViewModelGlobals.FinancialStatements){Dock = DockStyle.Fill};
-            ViewPanel.Controls.Clear();
-            ViewPanel.Controls.Add(control);
-        }
+        
 
         private void FundButton_Click(object sender, EventArgs e)
         {

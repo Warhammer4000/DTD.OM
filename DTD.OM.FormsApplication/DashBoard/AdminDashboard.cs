@@ -30,7 +30,7 @@ namespace DTD.OM.FormsApplication.DashBoard
         {
             LocalData.DataPath = AppDomain.CurrentDomain.BaseDirectory;
             ViewModelGlobals.FundAllocation = SaveAndLoad.LoadLocalData<FundAllocation>("Fundallocation.json");
-            ViewModelGlobals.FinancialStatements = SaveAndLoad.LoadLocalData<FinancialStatements>("FinancialStatements.json");
+            //ViewModelGlobals.FinancialStatements = SaveAndLoad.LoadLocalData<FinancialStatements>("FinancialStatements.json");
         }
 
         private void AccountingButton_Click(object sender, EventArgs e)

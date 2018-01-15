@@ -16,16 +16,34 @@ namespace DTD.OM.FormsControl.Dialogues
     {
         public MonthlyAllocation MonthlyAllocation { get; set; }
         
-        public NewStatement(List<string> statementsList)
+        public NewStatement(List<string> statementsList,int month,int year)
         {
             InitializeComponent();
-            MonthlyAllocation= new MonthlyAllocation(statementsList);
+            MonthlyAllocation= new MonthlyAllocation(statementsList,month,year);
             var info = new DateTimeFormatInfo();
             MonthBox.Items.AddRange(info.MonthNames.ToArray<Object>());
             MonthBox.Items.RemoveAt(MonthBox.Items.Count - 1);
-            foreach (int year in Enumerable.Range(2017, 2055))
+            foreach (int y in Enumerable.Range(2017, 2055))
             {
-                YearBox.Items.Add(year.ToString());
+                YearBox.Items.Add(y.ToString());
+            }
+
+            MonthBox.SelectedIndex = DateTime.Now.Month - 1;
+            YearBox.Text = DateTime.Now.Year.ToString();
+
+
+        }
+
+        public NewStatement()
+        {
+            InitializeComponent();
+            MonthlyAllocation = new MonthlyAllocation();
+            var info = new DateTimeFormatInfo();
+            MonthBox.Items.AddRange(info.MonthNames.ToArray<Object>());
+            MonthBox.Items.RemoveAt(MonthBox.Items.Count - 1);
+            foreach (int y in Enumerable.Range(2017, 2055))
+            {
+                YearBox.Items.Add(y.ToString());
             }
 
             MonthBox.SelectedIndex = DateTime.Now.Month - 1;

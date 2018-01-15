@@ -20,7 +20,7 @@ namespace DTD.OM.ViewModels.Accounts
             Year = year;
             MonthlyExpense=new MonthlyExpense(month,year);
             StatementLogs= new Stack<Log>();//TODO NOT YET IMPLEMENTED
-            Month = 1;
+          
         }
 
 

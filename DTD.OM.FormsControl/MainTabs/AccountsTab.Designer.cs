@@ -30,7 +30,6 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.FundButton = new System.Windows.Forms.Button();
-            this.FinancialButton = new System.Windows.Forms.Button();
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -40,34 +39,23 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.FundButton);
-            this.panel1.Controls.Add(this.FinancialButton);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(879, 54);
             this.panel1.TabIndex = 0;
+            this.panel1.Visible = false;
             // 
             // FundButton
             // 
             this.FundButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FundButton.Location = new System.Drawing.Point(129, 0);
+            this.FundButton.Location = new System.Drawing.Point(0, 0);
             this.FundButton.Name = "FundButton";
             this.FundButton.Size = new System.Drawing.Size(95, 52);
             this.FundButton.TabIndex = 1;
             this.FundButton.Text = "Fund Allocation";
             this.FundButton.UseVisualStyleBackColor = true;
             this.FundButton.Click += new System.EventHandler(this.FundButton_Click);
-            // 
-            // FinancialButton
-            // 
-            this.FinancialButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.FinancialButton.Location = new System.Drawing.Point(0, 0);
-            this.FinancialButton.Name = "FinancialButton";
-            this.FinancialButton.Size = new System.Drawing.Size(129, 52);
-            this.FinancialButton.TabIndex = 0;
-            this.FinancialButton.Text = "Financial Statements";
-            this.FinancialButton.UseVisualStyleBackColor = true;
-            this.FinancialButton.Click += new System.EventHandler(this.FinancialButton_Click);
             // 
             // ViewPanel
             // 
@@ -95,7 +83,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button FundButton;
-        private System.Windows.Forms.Button FinancialButton;
         private System.Windows.Forms.Panel ViewPanel;
     }
 }

@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DTD.OM.FormsApplication")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Open Office Management")]
+[assembly: AssemblyDescription("Necessary tool for Managing Office")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DTD.OM.FormsApplication")]
-[assembly: AssemblyCopyright("Copyright ©  2018")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("2TakarDeveloper")]
+[assembly: AssemblyProduct("OfficeManagement")]
+[assembly: AssemblyCopyright("Copyright ©2TakarDeveloper  2018")]
+[assembly: AssemblyTrademark("DTD")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible

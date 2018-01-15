@@ -15,11 +15,11 @@ namespace DTD.OM.ViewModels.Accounts
 
         public List<Statement> Statements { get; set; }
 
-        public MonthlyAllocation(List<string> statementNames)
+        public MonthlyAllocation(List<string> statementNames,int month,int year)
         {
             Statements=new List<Statement>();
-            Month = DateTime.Now.Month;
-            Year = DateTime.Now.Year;
+            Month = month;
+            Year = year;
             foreach (string statementName in statementNames)
             {
                 Statements.Add(new Statement(Month,Year){Name =statementName});
@@ -34,7 +34,8 @@ namespace DTD.OM.ViewModels.Accounts
         }
         public MonthlyAllocation()
         {
-            
+            Statements = new List<Statement>();
+           
         }
 
 

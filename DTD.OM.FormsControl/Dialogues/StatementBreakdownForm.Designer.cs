@@ -30,6 +30,8 @@ namespace DTD.OM.FormsControl.Dialogues
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StatementBreakdownForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.DayBox = new System.Windows.Forms.ComboBox();
@@ -39,8 +41,6 @@ namespace DTD.OM.FormsControl.Dialogues
             this.label2 = new System.Windows.Forms.Label();
             this.Allocation = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.InfoLable = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dailyThreashold = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
@@ -49,16 +49,17 @@ namespace DTD.OM.FormsControl.Dialogues
             this.Total = new System.Windows.Forms.NumericUpDown();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ViewPanel = new System.Windows.Forms.Panel();
-            this.AddItem = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.newItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Allocation)).BeginInit();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dailyThreashold)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Total)).BeginInit();
             this.panel5.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -73,9 +74,9 @@ namespace DTD.OM.FormsControl.Dialogues
             this.panel1.Controls.Add(this.Allocation);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Location = new System.Drawing.Point(20, 60);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(938, 24);
+            this.panel1.Size = new System.Drawing.Size(603, 24);
             this.panel1.TabIndex = 0;
             // 
             // label5
@@ -83,7 +84,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.label5.AutoSize = true;
             this.label5.Dock = System.Windows.Forms.DockStyle.Right;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(754, 0);
+            this.label5.Location = new System.Drawing.Point(419, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 20);
             this.label5.TabIndex = 7;
@@ -93,7 +94,7 @@ namespace DTD.OM.FormsControl.Dialogues
             // 
             this.DayBox.Dock = System.Windows.Forms.DockStyle.Right;
             this.DayBox.FormattingEnabled = true;
-            this.DayBox.Location = new System.Drawing.Point(791, 0);
+            this.DayBox.Location = new System.Drawing.Point(456, 0);
             this.DayBox.Name = "DayBox";
             this.DayBox.Size = new System.Drawing.Size(60, 21);
             this.DayBox.TabIndex = 6;
@@ -104,7 +105,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.MonthLable.AutoSize = true;
             this.MonthLable.Dock = System.Windows.Forms.DockStyle.Right;
             this.MonthLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MonthLable.Location = new System.Drawing.Point(851, 0);
+            this.MonthLable.Location = new System.Drawing.Point(516, 0);
             this.MonthLable.Name = "MonthLable";
             this.MonthLable.Size = new System.Drawing.Size(42, 20);
             this.MonthLable.TabIndex = 5;
@@ -115,7 +116,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.YearLable.AutoSize = true;
             this.YearLable.Dock = System.Windows.Forms.DockStyle.Right;
             this.YearLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.YearLable.Location = new System.Drawing.Point(893, 0);
+            this.YearLable.Location = new System.Drawing.Point(558, 0);
             this.YearLable.Name = "YearLable";
             this.YearLable.Size = new System.Drawing.Size(45, 20);
             this.YearLable.TabIndex = 4;
@@ -177,37 +178,14 @@ namespace DTD.OM.FormsControl.Dialogues
             this.label1.TabIndex = 0;
             this.label1.Text = "Allocation";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.InfoLable);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 526);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(938, 22);
-            this.panel2.TabIndex = 1;
-            // 
-            // InfoLable
-            // 
-            this.InfoLable.AutoSize = true;
-            this.InfoLable.Dock = System.Windows.Forms.DockStyle.Left;
-            this.InfoLable.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoLable.Location = new System.Drawing.Point(0, 0);
-            this.InfoLable.Name = "InfoLable";
-            this.InfoLable.Size = new System.Drawing.Size(0, 20);
-            this.InfoLable.TabIndex = 1;
-            this.InfoLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.InfoLable.UseCompatibleTextRendering = true;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.dailyThreashold);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(0, 24);
+            this.panel3.Location = new System.Drawing.Point(20, 84);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(938, 25);
+            this.panel3.Size = new System.Drawing.Size(603, 25);
             this.panel3.TabIndex = 2;
             // 
             // dailyThreashold
@@ -242,9 +220,9 @@ namespace DTD.OM.FormsControl.Dialogues
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.Total);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(0, 503);
+            this.panel4.Location = new System.Drawing.Point(20, 443);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(938, 23);
+            this.panel4.Size = new System.Drawing.Size(603, 23);
             this.panel4.TabIndex = 7;
             // 
             // label6
@@ -252,7 +230,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.label6.AutoSize = true;
             this.label6.Dock = System.Windows.Forms.DockStyle.Right;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(767, 0);
+            this.label6.Location = new System.Drawing.Point(432, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 24);
             this.label6.TabIndex = 5;
@@ -262,7 +240,7 @@ namespace DTD.OM.FormsControl.Dialogues
             // 
             this.Total.Dock = System.Windows.Forms.DockStyle.Right;
             this.Total.Enabled = false;
-            this.Total.Location = new System.Drawing.Point(818, 0);
+            this.Total.Location = new System.Drawing.Point(483, 0);
             this.Total.Maximum = new decimal(new int[] {
             9999999,
             0,
@@ -281,58 +259,52 @@ namespace DTD.OM.FormsControl.Dialogues
             this.panel5.AutoScroll = true;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.ViewPanel);
-            this.panel5.Controls.Add(this.AddItem);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 49);
+            this.panel5.Location = new System.Drawing.Point(20, 109);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(938, 454);
+            this.panel5.Size = new System.Drawing.Size(603, 334);
             this.panel5.TabIndex = 8;
             // 
             // ViewPanel
             // 
             this.ViewPanel.AutoScroll = true;
             this.ViewPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ViewPanel.ContextMenuStrip = this.contextMenuStrip1;
             this.ViewPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewPanel.Location = new System.Drawing.Point(0, 36);
+            this.ViewPanel.Location = new System.Drawing.Point(0, 0);
             this.ViewPanel.Name = "ViewPanel";
-            this.ViewPanel.Size = new System.Drawing.Size(934, 414);
+            this.ViewPanel.Size = new System.Drawing.Size(599, 330);
             this.ViewPanel.TabIndex = 1;
             // 
-            // AddItem
+            // contextMenuStrip1
             // 
-            this.AddItem.BackColor = System.Drawing.Color.SpringGreen;
-            this.AddItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.AddItem.Dock = System.Windows.Forms.DockStyle.Top;
-            this.AddItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddItem.Location = new System.Drawing.Point(0, 0);
-            this.AddItem.Name = "AddItem";
-            this.AddItem.Size = new System.Drawing.Size(934, 36);
-            this.AddItem.TabIndex = 0;
-            this.AddItem.Text = "Add Item";
-            this.AddItem.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddItem.UseVisualStyleBackColor = false;
-            this.AddItem.Click += new System.EventHandler(this.AddItem_Click);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.newItemToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(126, 26);
+            // 
+            // newItemToolStripMenuItem
+            // 
+            this.newItemToolStripMenuItem.Name = "newItemToolStripMenuItem";
+            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.newItemToolStripMenuItem.Text = "New Item";
+            this.newItemToolStripMenuItem.Click += new System.EventHandler(this.AddItem_Click);
             // 
             // StatementBreakdownForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ClientSize = new System.Drawing.Size(938, 548);
+            this.ClientSize = new System.Drawing.Size(643, 486);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StatementBreakdownForm";
-            this.Text = "Breakdown";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Left)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Allocation)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dailyThreashold)).EndInit();
@@ -340,6 +312,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Total)).EndInit();
             this.panel5.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -355,16 +328,15 @@ namespace DTD.OM.FormsControl.Dialogues
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown Allocation;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.NumericUpDown dailyThreashold;
         private System.Windows.Forms.Label label4;
-        private Label InfoLable;
         private Panel panel4;
         private Label label6;
         private NumericUpDown Total;
         private Panel panel5;
         private Panel ViewPanel;
-        private Button AddItem;
+        private ContextMenuStrip contextMenuStrip1;
+        private ToolStripMenuItem newItemToolStripMenuItem;
     }
 }

@@ -1,21 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using DTD.OM.FormsControl.CustomControls;
 using DTD.OM.Serializer;
 using DTD.OM.ViewModels;
 using DTD.OM.ViewModels.Accounts;
+using MetroFramework;
 
 namespace DTD.OM.FormsControl.Dialogues
 {
-    public partial class StatementBreakdownForm : Form
+    public partial class StatementBreakdownForm : MetroFramework.Forms.MetroForm
     {
         public Statement Statement { get; set; }
         public MonthlyExpense Breakdown { get; set; }
@@ -72,13 +66,13 @@ namespace DTD.OM.FormsControl.Dialogues
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            ItemExpenseControl item = (ItemExpenseControl) sender;
-            Log log = new Log
-            {
-                Message = item.ItemNameBox.Text+" of value "+item.value + @" was removed by" + @" Super User",
-                LogObject = Factory<ItemExpense>.ToJson(item.ItemExpense)
-            };
-            DailyExpense.DailyLogs.Push(log);
+            //ItemExpenseControl item = (ItemExpenseControl) sender;
+            //Log log = new Log
+            //{
+            //    Message = item.ItemNameBox.Text+" of value "+item.value + @" was removed by" + @" Super User",
+            //    LogObject = Factory<ItemExpense>.ToJson(item.ItemExpense)
+            //};
+            //DailyExpense.DailyLogs.Push(log);
 
         }
 
@@ -102,12 +96,12 @@ namespace DTD.OM.FormsControl.Dialogues
         
             ViewPanel.Controls.Add(itemExpenseControl);
 
-            Log log = new Log
-            {
-                Message = "New Item" + @" was added by" + @" Super User" ,
-                LogObject = Factory<DailyExpense>.ToJson(DailyExpense)
-            };
-            DailyExpense.DailyLogs.Push(log);
+            //Log log = new Log
+            //{
+            //    Message = "New Item" + @" was added by" + @" Super User" ,
+            //    LogObject = Factory<DailyExpense>.ToJson(DailyExpense)
+            //};
+            //DailyExpense.DailyLogs.Push(log);
         }
 
        
@@ -119,19 +113,20 @@ namespace DTD.OM.FormsControl.Dialogues
             decimal difference = dailyThreashold.Value - Total.Value;
             if (difference < 0)
             {
-                InfoLable.Text = @"Daily limit crossed, Fix daily threashold";
-                InfoLable.ForeColor=Color.Red;
-                Log log = new Log
-                {
-                    Message = "Daily Limit" + @" was Crossed by" + @" Super User" +"By"+(int)difference,
-                    LogObject = Factory<DailyExpense>.ToJson(DailyExpense)
-                };
-                DailyExpense.DailyLogs.Push(log);
+                //InfoLable.Text = @"Daily limit crossed, Fix daily threashold";
+                //InfoLable.ForeColor=Color.Red;
+                MetroMessageBox.Show(this, "Daily Limit Crossed", "Information!",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                //Log log = new Log
+                //{
+                //    Message = "Daily Limit" + @" was Crossed by" + @" Super User" +"By"+(int)difference,
+                //    LogObject = Factory<DailyExpense>.ToJson(DailyExpense)
+                //};
+                //DailyExpense.DailyLogs.Push(log);
             }
             else
             {
-                InfoLable.Text = @"You have "+(int)difference+@" Surplus for today";
-                InfoLable.ForeColor = Color.DarkGreen;
+                //InfoLable.Text = @"You have "+(int)difference+@" Surplus for today";
+                //InfoLable.ForeColor = Color.DarkGreen;
             }
 
         }
