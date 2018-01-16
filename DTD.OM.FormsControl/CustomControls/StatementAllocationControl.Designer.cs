@@ -141,6 +141,11 @@
             0,
             0,
             0});
+            this.Left.Minimum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            -2147483648});
             this.Left.Name = "Left";
             this.Left.ReadOnly = true;
             this.Left.Size = new System.Drawing.Size(116, 20);

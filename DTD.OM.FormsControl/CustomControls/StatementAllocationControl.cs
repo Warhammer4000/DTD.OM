@@ -13,6 +13,7 @@ using DTD.OM.Reporting;
 using DTD.OM.Serializer;
 using DTD.OM.ViewModels;
 using DTD.OM.ViewModels.Accounts;
+using MetroFramework;
 
 namespace DTD.OM.FormsControl.CustomControls
 {
@@ -84,7 +85,11 @@ namespace DTD.OM.FormsControl.CustomControls
 
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            Dispose();
+            if (MetroMessageBox.Show(this, "Are you sure?", "Warning", MessageBoxButtons.YesNoCancel,
+                    MessageBoxIcon.Hand) == DialogResult.Yes)
+            {
+                Dispose();
+            }
         }
     }
 }

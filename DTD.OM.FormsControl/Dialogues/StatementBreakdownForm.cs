@@ -89,7 +89,6 @@ namespace DTD.OM.FormsControl.Dialogues
         private void AddItem_Click(object sender, EventArgs e)
         {
             var itemExpenseControl = new ItemExpenseControl(){Dock = DockStyle.Top};
-            
             itemExpenseControl.ItemNameBox.TextChanged += ValueChanged;
             itemExpenseControl.value.ValueChanged += ValueChanged;
             itemExpenseControl.RemoveButton.Click += ValueChanged;
@@ -108,7 +107,15 @@ namespace DTD.OM.FormsControl.Dialogues
 
         private void Total_ValueChanged(object sender, EventArgs e)
         {
-            Left.Value = Allocation.Value - Total.Value;
+            DailyExpense.Total = Total.Value;
+
+            decimal total = 0;
+            foreach (DailyExpense dailyExpense in Breakdown.DailyExpenseList)
+            {
+                total += dailyExpense.Total;
+            }
+            Left.Value = Allocation.Value - total;
+
             Statement.Left = Left.Value;
             decimal difference = dailyThreashold.Value - Total.Value;
             if (difference < 0)

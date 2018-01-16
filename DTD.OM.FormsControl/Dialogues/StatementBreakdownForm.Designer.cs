@@ -51,6 +51,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.AddButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Allocation)).BeginInit();
@@ -132,6 +133,11 @@ namespace DTD.OM.FormsControl.Dialogues
             0,
             0,
             0});
+            this.Left.Minimum = new decimal(new int[] {
+            9999999,
+            0,
+            0,
+            -2147483648});
             this.Left.Name = "Left";
             this.Left.ReadOnly = true;
             this.Left.Size = new System.Drawing.Size(120, 20);
@@ -180,6 +186,7 @@ namespace DTD.OM.FormsControl.Dialogues
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.AddButton);
             this.panel3.Controls.Add(this.dailyThreashold);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
@@ -290,8 +297,21 @@ namespace DTD.OM.FormsControl.Dialogues
             this.newItemToolStripMenuItem.Text = "New Item";
             this.newItemToolStripMenuItem.Click += new System.EventHandler(this.AddItem_Click);
             // 
+            // AddButton
+            // 
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.AddButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddButton.Location = new System.Drawing.Point(550, 0);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(53, 25);
+            this.AddButton.TabIndex = 9;
+            this.AddButton.Text = "+ Add";
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddItem_Click);
+            // 
             // StatementBreakdownForm
             // 
+            this.AcceptButton = this.AddButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(643, 486);
@@ -338,5 +358,6 @@ namespace DTD.OM.FormsControl.Dialogues
         private Panel ViewPanel;
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem newItemToolStripMenuItem;
+        private Button AddButton;
     }
 }

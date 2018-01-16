@@ -48,6 +48,7 @@
     <Compile Include="Accounts\MonthlyAllocation.cs" />
     <Compile Include="Accounts\Statement.cs" />
     <Compile Include="Log.cs" />
+    <Compile Include="Personnel\Personnel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -39,5 +39,12 @@ namespace DTD.OM.FormsApplication.DashBoard
             ViewPanel.Controls.Clear();
             ViewPanel.Controls.Add(accountsTab);
         }
+
+        private void PersonnelButton_Click(object sender, EventArgs e)
+        {
+            PersonnelTab personnelTab = new PersonnelTab() { Dock = DockStyle.Fill };
+            ViewPanel.Controls.Clear();
+            ViewPanel.Controls.Add(personnelTab);
+        }
     }
 }

@@ -76,6 +76,12 @@
     <Compile Include="CustomControls\ItemExpenseControl.Designer.cs">
       <DependentUpon>ItemExpenseControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomControls\PersonnelControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomControls\PersonnelControl.Designer.cs">
+      <DependentUpon>PersonnelControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomControls\StatementAllocationControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="Dialogues\NewStatement.Designer.cs">
       <DependentUpon>NewStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogues\NewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogues\NewUserForm.Designer.cs">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Dialogues\StatementBreakdownForm.cs">
       <SubType>Form</SubType>
@@ -106,6 +118,12 @@
     <Compile Include="MainTabs\AccountsTab.Designer.cs">
       <DependentUpon>AccountsTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainTabs\PersonnelTab.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainTabs\PersonnelTab.Designer.cs">
+      <DependentUpon>PersonnelTab.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -121,11 +139,17 @@
     <EmbeddedResource Include="CustomControls\ItemExpenseControl.resx">
       <DependentUpon>ItemExpenseControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomControls\PersonnelControl.resx">
+      <DependentUpon>PersonnelControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomControls\StatementAllocationControl.resx">
       <DependentUpon>StatementAllocationControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogues\NewStatement.resx">
       <DependentUpon>NewStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogues\NewUserForm.resx">
+      <DependentUpon>NewUserForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dialogues\StatementBreakdownForm.resx">
       <DependentUpon>StatementBreakdownForm.cs</DependentUpon>
@@ -135,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainTabs\AccountsTab.resx">
       <DependentUpon>AccountsTab.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainTabs\PersonnelTab.resx">
+      <DependentUpon>PersonnelTab.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -194,6 +221,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\chart2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SearchUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
