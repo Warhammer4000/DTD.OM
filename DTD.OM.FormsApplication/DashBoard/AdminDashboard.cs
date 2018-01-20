@@ -13,6 +13,7 @@ using DTD.OM.FormsControl.MainTabs;
 using DTD.OM.Globals;
 using DTD.OM.Serializer;
 using DTD.OM.ViewModels.Accounts;
+using DTD.OM.ViewModels.Personnel;
 
 namespace DTD.OM.FormsApplication.DashBoard
 {
@@ -30,6 +31,7 @@ namespace DTD.OM.FormsApplication.DashBoard
         {
             LocalData.DataPath = AppDomain.CurrentDomain.BaseDirectory;
             ViewModelGlobals.FundAllocation = SaveAndLoad.LoadLocalData<FundAllocation>("Fundallocation.json");
+            ViewModelGlobals.Personnels = SaveAndLoad.LoadLocalData<List<Personnel>>("Personnel.json");
             //ViewModelGlobals.FinancialStatements = SaveAndLoad.LoadLocalData<FinancialStatements>("FinancialStatements.json");
         }
 

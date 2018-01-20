@@ -30,15 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.NewPersonnelButton = new System.Windows.Forms.Button();
             this.SearchPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.NametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.NametextBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.IdTextbox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.DepartmentBox = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.NewPersonnelButton = new System.Windows.Forms.Button();
             this.viewPanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.SearchPanel.SuspendLayout();
@@ -68,6 +68,30 @@
             this.panel1.Size = new System.Drawing.Size(860, 60);
             this.panel1.TabIndex = 3;
             // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::DTD.OM.FormsControl.Properties.Resources.SearchUser;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.Enabled = false;
+            this.button1.Location = new System.Drawing.Point(497, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(62, 60);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // NewPersonnelButton
+            // 
+            this.NewPersonnelButton.BackgroundImage = global::DTD.OM.FormsControl.Properties.Resources.NewUser;
+            this.NewPersonnelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.NewPersonnelButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.NewPersonnelButton.Location = new System.Drawing.Point(0, 0);
+            this.NewPersonnelButton.Name = "NewPersonnelButton";
+            this.NewPersonnelButton.Size = new System.Drawing.Size(62, 60);
+            this.NewPersonnelButton.TabIndex = 1;
+            this.NewPersonnelButton.UseVisualStyleBackColor = false;
+            this.NewPersonnelButton.Click += new System.EventHandler(this.NewPersonnelButton_Click);
+            // 
             // SearchPanel
             // 
             this.SearchPanel.Controls.Add(this.label2);
@@ -82,13 +106,6 @@
             this.SearchPanel.Size = new System.Drawing.Size(301, 60);
             this.SearchPanel.TabIndex = 0;
             // 
-            // NametextBox
-            // 
-            this.NametextBox.Location = new System.Drawing.Point(54, 3);
-            this.NametextBox.Name = "NametextBox";
-            this.NametextBox.Size = new System.Drawing.Size(100, 20);
-            this.NametextBox.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -98,6 +115,13 @@
             this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Name";
+            // 
+            // NametextBox
+            // 
+            this.NametextBox.Location = new System.Drawing.Point(54, 3);
+            this.NametextBox.Name = "NametextBox";
+            this.NametextBox.Size = new System.Drawing.Size(100, 20);
+            this.NametextBox.TabIndex = 1;
             // 
             // label3
             // 
@@ -133,30 +157,6 @@
             this.DepartmentBox.Name = "DepartmentBox";
             this.DepartmentBox.Size = new System.Drawing.Size(121, 21);
             this.DepartmentBox.TabIndex = 5;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = global::DTD.OM.FormsControl.Properties.Resources.SearchUser;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(497, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(62, 60);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // NewPersonnelButton
-            // 
-            this.NewPersonnelButton.BackgroundImage = global::DTD.OM.FormsControl.Properties.Resources.NewUser;
-            this.NewPersonnelButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.NewPersonnelButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.NewPersonnelButton.Location = new System.Drawing.Point(0, 0);
-            this.NewPersonnelButton.Name = "NewPersonnelButton";
-            this.NewPersonnelButton.Size = new System.Drawing.Size(62, 60);
-            this.NewPersonnelButton.TabIndex = 1;
-            this.NewPersonnelButton.UseVisualStyleBackColor = false;
-            this.NewPersonnelButton.Click += new System.EventHandler(this.NewPersonnelButton_Click);
             // 
             // viewPanel
             // 

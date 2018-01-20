@@ -42,6 +42,7 @@ namespace DTD.OM.FormsControl.Dialogues
             this.Allocation = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.AddButton = new System.Windows.Forms.Button();
             this.dailyThreashold = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -51,7 +52,8 @@ namespace DTD.OM.FormsControl.Dialogues
             this.ViewPanel = new System.Windows.Forms.Panel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.newItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.AddButton = new System.Windows.Forms.Button();
+            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Left)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Allocation)).BeginInit();
@@ -195,6 +197,18 @@ namespace DTD.OM.FormsControl.Dialogues
             this.panel3.Size = new System.Drawing.Size(603, 25);
             this.panel3.TabIndex = 2;
             // 
+            // AddButton
+            // 
+            this.AddButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.AddButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AddButton.Location = new System.Drawing.Point(550, 0);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(53, 25);
+            this.AddButton.TabIndex = 9;
+            this.AddButton.Text = "+ Add";
+            this.AddButton.UseVisualStyleBackColor = false;
+            this.AddButton.Click += new System.EventHandler(this.AddItem_Click);
+            // 
             // dailyThreashold
             // 
             this.dailyThreashold.Dock = System.Windows.Forms.DockStyle.Left;
@@ -286,28 +300,33 @@ namespace DTD.OM.FormsControl.Dialogues
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.newItemToolStripMenuItem});
+            this.newItemToolStripMenuItem,
+            this.copyToolStripMenuItem,
+            this.pasteToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(126, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
             // 
             // newItemToolStripMenuItem
             // 
             this.newItemToolStripMenuItem.Name = "newItemToolStripMenuItem";
-            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
+            this.newItemToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newItemToolStripMenuItem.Text = "New Item";
             this.newItemToolStripMenuItem.Click += new System.EventHandler(this.AddItem_Click);
             // 
-            // AddButton
+            // copyToolStripMenuItem
             // 
-            this.AddButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.AddButton.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AddButton.Location = new System.Drawing.Point(550, 0);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(53, 25);
-            this.AddButton.TabIndex = 9;
-            this.AddButton.Text = "+ Add";
-            this.AddButton.UseVisualStyleBackColor = false;
-            this.AddButton.Click += new System.EventHandler(this.AddItem_Click);
+            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.copyToolStripMenuItem.Text = "Copy";
+            this.copyToolStripMenuItem.Click += new System.EventHandler(this.copyToolStripMenuItem_Click);
+            // 
+            // pasteToolStripMenuItem
+            // 
+            this.pasteToolStripMenuItem.Enabled = false;
+            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pasteToolStripMenuItem.Text = "Paste";
+            this.pasteToolStripMenuItem.Click += new System.EventHandler(this.pasteToolStripMenuItem_Click);
             // 
             // StatementBreakdownForm
             // 
@@ -359,5 +378,7 @@ namespace DTD.OM.FormsControl.Dialogues
         private ContextMenuStrip contextMenuStrip1;
         private ToolStripMenuItem newItemToolStripMenuItem;
         private Button AddButton;
+        private ToolStripMenuItem copyToolStripMenuItem;
+        private ToolStripMenuItem pasteToolStripMenuItem;
     }
 }

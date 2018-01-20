@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 using System.Windows.Forms;
 using DTD.OM.FormsControl.CustomControls;
@@ -16,17 +17,20 @@ namespace DTD.OM.FormsControl.Dialogues
         
         private DailyExpense DailyExpense { get; set; }
 
+        public List<ItemExpense> CopyList { get; set; }
+
+
         public StatementBreakdownForm(Statement statement)
         {
             InitializeComponent();
             Statement = statement;
             Breakdown = Statement.MonthlyExpense;
-            
+            CopyList= new List<ItemExpense>();
             Allocation.Value = Statement.Allocated;
             MonthLable.Text = @","+new DateTimeFormatInfo().GetMonthName(Breakdown.Month)+ @",";
             YearLable.Text = Breakdown.Year.ToString();
-            int days = DateTime.DaysInMonth(Breakdown.Year, Breakdown.Month);
-            for (int i=1;i<=days;i++)
+            var days = DateTime.DaysInMonth(Breakdown.Year, Breakdown.Month);
+            for (var i=1;i<=days;i++)
             {
                 DayBox.Items.Add(i);
             }
@@ -176,6 +180,23 @@ namespace DTD.OM.FormsControl.Dialogues
             InitializeData(DayBox.SelectedIndex);
         }
 
-       
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CopyList = DailyExpense.ItemExpenses;
+            pasteToolStripMenuItem.Enabled = true;
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (var itemExpense in CopyList)
+            {
+                var itemExpenseControl = new ItemExpenseControl(itemExpense) { Dock = DockStyle.Top };
+                itemExpenseControl.ItemNameBox.TextChanged += ValueChanged;
+                itemExpenseControl.value.ValueChanged += ValueChanged;
+                itemExpenseControl.RemoveButton.Click += ValueChanged;
+                itemExpenseControl.RemoveButton.Click += RemoveButton_Click; ;
+                ViewPanel.Controls.Add(itemExpenseControl);
+            }
+        }
     }
 }
